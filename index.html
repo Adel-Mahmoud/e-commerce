@@ -641,7 +641,7 @@
         localStorage.setItem('id',id)
       }
       fetch("https://fakestoreapi.com/products")
-        .then((res) => res.json())
+        .then((res) => res.json()) 
         .then((data) => {
           console.log(data);
           data.map((data) => {
@@ -733,94 +733,6 @@
                     </div>
                     `;
           });
-          // document.querySelector("#products").innerHTML +=
-          // `
-          // <!-- Product Card -->
-          // <div class="m-auto w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-          //     <!-- Product Image Container -->
-          //     <div class="relative overflow-hidden group">
-          //     <a href="#" class="block">
-          //         <img
-          //         class="p-8 rounded-t-lg w-full h-[300px] object-contain"
-          //         src="${data.image}"
-          //         alt="Apple Watch"
-          //         >
-          //     </a>
-          //     <!-- Shopping Bag Button -->
-          //     <button
-          //     class="absolute top-4 right-4 bg-gray-100 rounded-full p-2 hover:p-4 shadow-lg hover:shadow-xl transition-all duration-300"
-          //     >
-          //     <svg
-          //         xmlns="http://www.w3.org/2000/svg"
-          //         class="w-6 h-6 text-gray-600 hover:text-black transition-colors duration-300"
-          //         fill="none"
-          //         viewBox="0 0 24 24"
-          //         stroke="currentColor"
-          //     >
-          //         <path
-          //         stroke-linecap="round"
-          //         stroke-linejoin="round"
-          //         stroke-width="2"
-          //         d="M16 10V8a4 4 0 10-8 0v2M5 10h14l1 10a2 2 0 01-2 2H6a2 2 0 01-2-2l1-10z"
-          //         />
-          //     </svg>
-          //     </button>
-          //     <!-- Sale Badge -->
-          //     <span class="absolute top-4 left-4 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-          //         SALE
-          //     </span>
-          //     </div>
-
-          //     <!-- Product Details -->
-          //     <div class="px-5 pb-5">
-          //     <!-- Product Category -->
-          //     <span class="text-xs font-medium text-gray-500 uppercase tracking-wider">
-          //         ${data.category}
-          //     </span>
-
-          //     <!-- Product Title -->
-          //     <a href="#">
-          //         <p class="text-xl line-clamp-2 font-semibold tracking-tight text-gray-900 mt-2 mb-4">
-          //             ${data.description}
-          //         </p>
-          //     </a>
-
-          //     <!-- Rating -->
-          //     <div class="flex items-center mb-4">
-          //         <div class="flex items-center space-x-1">
-          //         <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-          //             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-          //         </svg>
-          //         <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-          //             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-          //         </svg>
-          //         <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-          //             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-          //         </svg>
-          //         <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-          //             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-          //         </svg>
-          //         <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-          //             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-          //         </svg>
-          //         </div>
-          //         <span class="ml-2 text-sm text-gray-600">(4.0/5)</span>
-          //     </div>
-
-          //     <!-- Price and Action -->
-          //     <div class="flex items-center justify-between">
-          //         <div class="flex flex-col">
-          //         <span class="text-sm text-gray-500 line-through">$599</span>
-          //         <span class="text-2xl font-bold text-gray-900">$${data.price}</span>
-          //         </div>
-
-          //         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-600 hover:text-red-500 transition-colors duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          //             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-          //         </svg>
-          //     </div>
-          //     </div>
-          // </div>
-          // `;
         });
     </script>
   </body>
